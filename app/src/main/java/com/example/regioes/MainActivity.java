@@ -2,11 +2,13 @@ package com.example.regioes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnRegioes, btnEstados;
+    private Boolean clicou = true;
     private String[] regioes = getResources().getStringArray(R.array.regioes);
     private String[] regiaoNorte = getResources().getStringArray(R.array.regiaoNorte);
     private String[] regiaoNordeste = getResources().getStringArray(R.array.regiaoNordeste);
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button estado;
     private int contador, selecao = 0;
+    private int contRegioes, contEstados = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,38 +28,47 @@ public class MainActivity extends AppCompatActivity {
         btnRegioes = (Button) findViewById(R.id.btnRegioes);
         btnEstados = (Button) findViewById(R.id.btnEstados);
 
-
-        btnRegioes.setOnTouchListener( new OnSwipeTouchListener(this){
-
+        btnRegioes.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSwipeRight() {
-                super.onSwipeRight();
-                if(btnRegioes){
-                    selecao ++;
-                }
-                contador ++;
-                tvAfirmacao.setText( afirmacoes[contador]);
-            }
+            public void onClick(View view) {
+//                btnRegioes.setText(regioes[contador] );
+                contador++;
 
-            @Override
-            public void onSwipeLeft() {
-                super.onSwipeLeft();
-                if( !gabarito[contador]){
-                    acertos ++;
-                }
-                contador ++;
-                tvAfirmacao.setText( afirmacoes[contador]);
-            }
-
-            @Override
-            public void onSwipeTop() {
-                super.onSwipeTop();
-            }
-
-            @Override
-            public void onSwipeBottom() {
-                super.onSwipeBottom();
             }
         });
+
+//        btnRegioes.setOnTouchListener( new OnSwipeTouchListener(this){
+//
+//            @Override
+//            public void onSwipeRight() {
+//                super.onSwipeRight();
+//                if(){
+//                    selecao ++;
+//                }
+//                contador ++;
+//                tvAfirmacao.setText( afirmacoes[contador]);
+//            }
+//
+//            @Override
+//            public void onSwipeLeft() {
+//                super.onSwipeLeft();
+//                if( !gabarito[contador]){
+//                    acertos ++;
+//                }
+//                contador ++;
+//                tvAfirmacao.setText( afirmacoes[contador]);
+//            }
+//
+//            @Override
+//            public void onSwipeTop() {
+//                super.onSwipeTop();
+//            }
+//
+//            @Override
+//            public void onSwipeBottom() {
+//                super.onSwipeBottom();
+//            }
+//        });
     }
+
 }
