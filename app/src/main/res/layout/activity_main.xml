@@ -9,78 +9,33 @@
 
     <TextView
         android:id="@+id/txtRegiao"
-        android:layout_width="213dp"
-        android:layout_height="158dp"
+        android:layout_width="233dp"
+        android:layout_height="161dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Região"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtEstado"
-        android:layout_width="213dp"
-        android:layout_height="158dp"
+        android:layout_width="233dp"
+        android:layout_height="161dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="120dp"
         android:gravity="center"
         android:text="Estados"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.693" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="86dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abaixo" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="86dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/acima"
-        tools:layout_editor_absoluteY="321dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="86dp"
-        android:layout_height="89dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/esquerda"
-        tools:layout_editor_absoluteY="511dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="86dp"
-        android:layout_height="89dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/direita"
-        tools:layout_editor_absoluteY="511dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegiao"
+        app:layout_constraintVertical_bias="0.981" />
 
 </android.support.constraint.ConstraintLayout>

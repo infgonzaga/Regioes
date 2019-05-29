@@ -39,6 +39,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwipeTop() {
                 super.onSwipeTop();
+                if(contRegiao == 0)
+                {
+                    contRegiao = regiao.length;
+                }
+                else
+                {
+                    contRegiao--;
+                }
+
+                tvRegiao.setText(regiao[contRegiao]);
+                AtualizaEstadoRegiao();
+            }
+
+            @Override
+            public void onSwipeBottom() {
+                super.onSwipeBottom();
+
 
                 if(contRegiao == regiao.length)
                 {
@@ -49,23 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     contRegiao++;
                 }
                 tvRegiao.setText(regiao[contRegiao]);
-                AtualizaEstadoRegioao();
-            }
-
-            @Override
-            public void onSwipeBottom() {
-                super.onSwipeBottom();
-
-                if(contRegiao == 0)
-                {
-                    contRegiao = regiao.length;
-                }
-                else
-                {
-                    contRegiao--;
-                }
-                tvRegiao.setText(regiao[contRegiao]);
-                AtualizaEstadoRegioao();
+                AtualizaEstadoRegiao();
             }
 
 
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 contEstado--;
             }
 
-            public void AtualizaEstadoRegioao()
+            public void AtualizaEstadoRegiao()
             {
                 contEstado = 0;
                 switch (regiao[contRegiao]){
